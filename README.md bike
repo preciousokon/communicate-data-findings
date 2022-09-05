@@ -1,0 +1,51 @@
+# Ford GoBike System Dataset Exploration¶
+## Precious Okon
+
+
+## Dataset
+
+The Ford Gobike Dataset contains records from rides  gotten from a bike-sharing system covering the greater San Francisco Bay area. The 
+dataset contains 183412 and 16 columns coonsisting of duration, start time and end time column. start station and end station Id, start
+station and end station longitude and latitude, member gender, user type amongst other column.
+
+I introduced 6 new columns which are start day, start month, start hour, end day, end hour and end month column which was gotten start time 
+and end time column.
+
+After cleaning the dataset, I dropped rows with mising information which made our dataset to become 174952 rides and 22 columns.
+
+I changed the new columns, member gender, user type and bike share for all trip from string to categorical datatype
+I changed station Id from float to string
+I changed start time and end time from string to datetime
+
+
+
+## Summary of Findings
+After my exploration on the dataset I made the following findings
+
+- There were more male users than female users
+- Most users started their ride on the 8th, 9th which indicate morning rush to work and the ended their rides on 17th and 18th hour which
+  indicate rushing hours home from work
+- Subcribers took the most ride than Customers
+- More Subscribers shared their bike and no customer was allowed to shared their ride
+- They were more rides on Tuesday and Thursdays which are weekdays
+- The Gender category 'Other' prefer going on ride during weekends especially on Sunday and they usually have ride duration of over 1800 
+  per seconds during weekends
+- The gender category 'Other' gender has long duration when the start their ride at the 2nd or 3rd hour and they also had longer ride 
+  duration than male and female user
+- Male always start rides earlier than female and other gender
+- There is a positive relationship between start day, end day as regard duration. As start day increases, end day tends to decrease and
+  vice versa.
+
+
+
+## Key Insights for Presentation
+
+For the presentation I focused more on the distribution of Rides End Day, distribution of Rides Per Gender, Relationship Between Rides 
+Month and User Type
+
+Afterwards I checked the relationship of duration across Gender and User Type, Hour and Gender, Day and Gender. My key insights in this 
+exploration is to find out the duration each gender takes on rides, which particular day and hour each gender like going on rides.
+
+I made use of seaborn countplot to show the distribution of the categorical variables and pointplot to show the relationship of duration
+across different categorical variable. 
+
